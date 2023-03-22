@@ -1,0 +1,63 @@
+{
+  "CDK V2 Construct": {
+    "prefix": "cdk2-construct",
+    "body": [
+      "import { Construct } from 'constructs';",
+      "",
+      "export interface ${1:ConstructorName}Props {",
+      "",
+      "}",
+      "",
+      "export class ${1:ConstructorName} extends Construct {",
+      "  constructor(scope: Construct, id: string, props: ${1:ConstructorName}Props) {",
+      "    super(scope, id);",
+      "",
+      "    $BLOCK_COMMENT_START Your code! $BLOCK_COMMENT_END",
+      "    ${0}",
+      "  }",
+      "}"
+    ],
+    "description": "Generate a CDK V2 construct scaffold"
+  },
+  "CDK V2 Stack": {
+    "prefix": "cdk2-stack-create",
+    "body": [
+      "import { Stack, StackProps } from 'aws-cdk-lib';",
+      "import { Construct } from 'constructs';",
+      "",
+      "export interface ${1:StackName}Props extends StackProps {",
+      "",
+      "}",
+      "",
+      "export class ${1:StackName} extends Stack {",
+      "  constructor(scope: Construct, id: string, props: ${1:StackName}Props) {",
+      "    super(scope, id, props);",
+      "",
+      "    $BLOCK_COMMENT_START Your code! $BLOCK_COMMENT_END",
+      "    ${0}",
+      "  }",
+      "}"
+    ],
+    "description": "Generate a CDK V2 stack scaffold"
+  },
+  "CDK V2 Cfn Parameter": {
+    "prefix": "cdk2-cfn-parameter",
+    "body": [
+      "new cdk.CfnParameter(this, \"${1:id}\", {",
+      "  type: \"${2|String,Number,List<Number>,CommaDelimitedList|}\"",
+      "})"
+    ],
+    "description": "Add a CloudFormation parameter"
+  },
+
+  "CDK V2 Cfn Output": {
+    "prefix": "cdk2-cfn-output",
+    "body": [
+      "new cdk.CfnOutput(this, \"${1:id}\", {",
+      "  value: \"${2}\",",
+      "  exportName: \"${1}\"",
+      "})"
+    ],
+    "description": "Add a CloudFormation output"
+  }
+}

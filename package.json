@@ -1,0 +1,20 @@
+{
+  "name": "cdk-v2-snippets-typescript",
+  "displayName": "CDK V2 Snippets TypeScript",
+  "description": "AN unofficial set of snippets for AWS CDK v2 for TypeScript",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/core-cdk2.code-snippets"
+      }
+    ]
+  }
+}
